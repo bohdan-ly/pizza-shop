@@ -5,17 +5,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Starter</title>
+    <title>Pizza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="main__body">
     <!-- Header -->
+    <header>
+        <!-- Navbar -->
+        <nav>
+            <div class="container">
+                <div class="navbar">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="#" class="menu__item-link">Payment</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__item-link">
+                                About us
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__item-link">Contacts</a>
+                        </li>
+                    </ul>
+                    <div class="logo">
+                        <a href="#">
+                            <img src="/src/assets/logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="nav__info">
+                        <div class="nav__time">Daily 11am - 9pm</div>
+                        <div class="nav__phone">
+                            <img src="/src/assets/phone.svg" alt="phone">
+                            <span>0 800 33 08 98</span>
+                        </div>
+                    </div>
+
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <!-- Main Page -->
     <main>
         <!-- Hero -->
+        <section class="section__hero">
+            <div class="container">
+                <div class="hero">
+                    <div class="section__title">Food delivery in Kovel</div>
+                    <div class="section__text">If you decide to relax or have unexpected guests, call us. We make sure
+                        that your vacation is comfortable, enjoyable and delicious</div>
+                    <img class="hero__img image__item-1" src="/src/assets/hero__bg.png" alt="pizza particle">
+                    <!-- <img class="hero__img image__item-2" src="/src/assets/delivering__info.svg"
+                        alt="delivering information"> -->
+                    <img class="hero__img image__item-3" src="/src/assets/vegitable.svg" alt="">
+                </div>
+            </div>
+        </section>
 
-        <!-- Special -->
+        <!-- Dishes -->
+
+        <section class="section__dishes">
+            <div class="container">
+                <div class="dishes">
+                    <div class="section__title">Popular dishes</div>
+
+                    <div class="tabs">
+                        <div class="tabs__header">
+                            <div class="tabs__header-item active">Вкладка 1</div>
+                            <div class="tabs__header-item">Вкладка 2</div>
+                            <div class="tabs__header-item">Вкладка 3</div>
+                            <div class="tabs__header-item">Вкладка 4</div>
+                            <div class="tabs__header-item">Вкладка 5</div>
+                        </div>
+                        <div class="tabs__content">
+                            <div class="tabs__content-item">1</div>
+                            <div class="tabs__content-item">2</div>
+                            <div class="tabs__content-item">3</div>
+                            <div class="tabs__content-item">4</div>
+                            <div class="tabs__content-item">5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Trusted -->
 
@@ -27,6 +106,6 @@
 
 </body>
 
-<script src="./src/js/scripts.js"></script>
+<script src="./src/js/scripts.js" type="module"></script>
 
 </html>

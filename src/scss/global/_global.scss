@@ -2,7 +2,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family: $fontfamily;
+    font-family: $fontMain;
 }
 
 // Container
@@ -28,7 +28,7 @@
 // Body Locked
 body {
     font-family: 'Metropolis';
-    min-height: 100%;
+    height: 100%;
     position: relative;
     font-size: 1rem;
     background: var(--background);
@@ -57,7 +57,7 @@ body {
 }
 
 .btn {
-    background: $neutral;
+    background: --secondary;
     border-radius: 4px;
     color: #fff;
     padding: 11px 24px;
@@ -66,7 +66,7 @@ body {
     transition: .3s all ease;
 
     &:hover {
-        background: $neutralDark;
+        background: --background;
 
         svg {
             transform: translate(10px);
@@ -77,19 +77,19 @@ body {
 
 .btn__outline {
     border-radius: 4px;
-    color: $neutral;
+    color: --secondary;
     padding: 11px 24px;
     display: inline-flex;
     transition: .3s all ease;
 
     &:hover {
-        color: $neutralDark;
+        color: --background;
         transition: .3s all ease;
     }
 }
 
 .section__title {
-    color: $primary;
+    color: --primary-color;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -102,7 +102,7 @@ body {
 }
 
 .section__subtitle {
-    color: $secondary;
+    color: --secondary;
     margin-top: 15px;
     font-style: normal;
     font-weight: 400;

@@ -75,7 +75,7 @@
     }
 }
 .special__item-title {
-    color: $primary;
+    color: --primary-color;
     margin-top: 40px;
     font-style: normal;
     font-weight: 800;
@@ -87,7 +87,7 @@
     }
 }
 .special__item-text {
-    color: $secondary;
+    color: --secondary;
     margin-top: 16px;
     font-style: normal;
     font-weight: 400;

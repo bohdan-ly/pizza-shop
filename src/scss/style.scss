@@ -7,12 +7,28 @@
 
 // Sections or Pages SCSS-files imports
 @import './components/header';
-@import './components/hero';
-@import './components/special';
-@import './components/trusted';
-@import './components/support';
-@import './components/footer';
+@import './components/tabs';
+@import './sections/hero';
+@import './sections/dishes';
 
 
 // Libs
 // @import './libs/swiper';
+
+.section__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: var(--primary-color);
+}
+
+.section__text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--primary-color);
+}

@@ -4,72 +4,152 @@
 // Navbar
 nav {
     overflow: hidden;
+    background: var(--primary);
 }
 
 .navbar {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding-top: 16px;
-    padding-bottom: 16px;
     align-items: center;
+    padding: 25px 0;
 }
 
-.logo__item {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 18px;
-    color: $primary;
+.logo {
+    img {
+        height: 70px;
+    }
 }
 
 .menu {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
+
+    @media (max-width: $breakpoint992) {
+        gap: 20px;
+    }
 
     // .menu__item
     &__item {
-
-        &:last-child {
-            a {
-                color: #fff;
-                padding: 13px 20px;
-            }
-
-        }
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: var(--primary-color);
     }
 
     // .menu__item-link
     &__item-link {
+        font-family: 'Montserrat';
         font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 14px;
-        color: $secondary;
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: var(--primary-color);
+        position: relative;
 
-        @media (max-width: $breakpoint768) {
-            gap: 0;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            background: var(--secondary);
+            height: 2px;
+            width: 0;
+            transition: $mainTransition;
         }
 
-        svg {
-            @media (max-width: $breakpoint768) {
-                display: none;
-            }
+        @media (max-width: $breakpoint992) {
+            font-size: 14px;
         }
 
         &:hover {
-            color: $neutral;
+            color: --secondary;
             transition: .3s all ease;
 
-            path {
-                fill: $neutral;
-                transition: .3s all ease;
+            &::after {
+                width: 40%;
             }
+
         }
+    }
+}
+
+.nav {
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        @media (max-width: $breakpoint992) {
+            gap: 20px;
+        }
+
+        @media (max-width: $breakpoint768) {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            padding: 0 40px;
+        }
+
+        @media (max-width: $breakpoint480) {
+            display: none;
+        }
+    }
+
+    &__time {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: var(--primary-color);
+        position: relative;
+
+
+        @media (max-width: $breakpoint992) {
+            font-size: 14px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: -10px;
+            width: 4px;
+            height: 4px;
+            background: #46CB72;
+            border-radius: 50%;
+        }
+    }
+
+    &__phone {
+        display: flex;
+        align-items: center;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: right;
+        color: var(--primary-color);
+
+
+        @media (max-width: $breakpoint992) {
+            font-size: 14px;
+        }
+
+        img {
+            width: 40px;
+            margin-top: 6px;
+            height: auto;
+        }
+
+
     }
 }
 
@@ -80,10 +160,11 @@ nav {
 
 // Burger menu styles
 @media screen and (max-width: $burgerBreakpoint) {
+
     // .menu
     .menu {
         position: fixed;
-        background: $neutral;
+        background: var(--secondary);
         left: 0;
         top: 0;
         height: 100vh;
